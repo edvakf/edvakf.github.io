@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar goes here -->
+    <div class="navbar-fixed">
+      <nav class="blue-grey lighten-2" role="navigation">
+        <div class="container nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Modern Olympics Stats</a>
+          <ul class="right hide-on-med-and-down">
+            <li id="current-year">1960 (Roma)</li>
+            <li>
+              <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Select Year</a>
+
+              <ul id='dropdown1' class='dropdown-content'>
+              </ul>            
+              <!-- <ul class="pagination">
+                <li><a href="#" class="white-text"><i class="material-icons">chevron_left</i></a></li>
+                <li><a href="#" class="white-text">1960</a></li>
+                <li><a href="#" class="white-text"><i class="material-icons">chevron_right</i></a></li>
+              </ul> -->
+            </li> <!-- TODO: Year selector -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <p>This interactive presentation shows how each country in the world came to win the Olympic medals (all medals combined).</p>
+      <p>Tap the circular button at the bottom right of the page, or you can select the specific year from the selection button on the top right.</p>
+      <p>You can also hover a mouse over a country/region to see the histogram of its medals over time.</p>
+      <p>(Medals of Soviet Union are merged to Russian, and West German to German)</p>
+    </div>
+
+    <div class="map-container">
+      <svg id="map" width="1000" height="700"></svg>
+    <!-- TODO: hovering over a country shows country info (name, NOC), histogram of medal count over the years -->
+    </div>
+
+
+    <!-- TODO: instructions, how to use the interactive slideshow, key messages -->
+    <!-- TODO: when a country is selected, medal count by sports at the year -->
+    <footer class="page-footer blue-grey lighten-5">
+      <div class="container black-text">
+        <h6 class="black-text" id="country-name"></h6>
+        <svg id="hist" width="1000" height="100"></svg>
+        <!-- <div class="row">
+          <div class="col l6 s12">
+            <h5 class="black-text">Footer Content</h5>
+            <p class="black-text">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="black-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </footer>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large teal lighten-2 waves-effect" id="next-button" href="#">
+        <i class="material-icons">chevron_right</i>
+      </a>
+    </div>    
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
